@@ -8,11 +8,18 @@
 		<!--<link rel="stylesheet" href="css/app.css">-->
 	</head>
 	<body>
-		<!--<section id="todoapp">-->
-			<!--<header id="header"></header>-->
-			<!--<section id="main"></section>-->
-			<!--<footer id="footer"></footer>-->
-		<!--</section>-->
+		<section id="todoapp">
+			<header id="header">header</header>
+			<section id="main">main</section>
+			<footer id="footer">footer</footer>
+		</section>
+
+		<script type="text/html" id="template-header">
+			<h1>todos</h1>
+			<input id="new-todo" placeholder="What needs to be done?" autofocus>
+		</script>
+
+
 		<!--<footer id="info">-->
 			<!--<p>Double-click to edit a todo</p>-->
 			<!--<p>-->
@@ -41,10 +48,7 @@
 			<!--<button id="clear-completed" <% if (!completedCount) { %>class="hidden"<% } %>>Clear completed</button>-->
 		<!--</script>-->
 
-		<!--<script type="text/html" id="template-header">-->
-			<!--<h1>todos</h1>-->
-			<!--<input id="new-todo" placeholder="What needs to be done?" autofocus>-->
-		<!--</script>-->
+
 
 		<!--<script type="text/html" id="template-todoItemView">-->
 			<!--<div class="view">-->
@@ -68,19 +72,22 @@
 		<script src="node_modules/backbone.localstorage/backbone.localStorage.js"></script>
 		<script src="node_modules/backbone.marionette/lib/backbone.marionette.js"></script>
 		<!-- application -->
-		<!--<script src="js/TodoMVC.js"></script>-->
-		<!--<script src="js/TodoMVC.Todos.js"></script>-->
-		<!--<script src="js/TodoMVC.Layout.js"></script>-->
-		<!--<script src="js/TodoMVC.TodoList.Views.js"></script>-->
-		<!--<script src="js/TodoMVC.TodoList.js"></script>-->
-		<!--<script>-->
-			<!--$(function () {-->
-				<!--TodoMVC.on('start', function () {-->
-					<!--Backbone.history.start();-->
-				<!--});-->
-				<!--// start the TodoMVC app (defined in js/TodoMVC.js)-->
-				<!--TodoMVC.start();-->
-			<!--});-->
-		<!--</script>-->
+		<script src="app/js/app.js"></script>
+		<script src="app/js/Play.Layout.js"></script>
+		<script src="app/js/Play.js"></script>
+		<!--<script src="js/Ted.Todos.js"></script>-->
+		<!--<script src="js/Ted.Layout.js"></script>-->
+		<!--<script src="js/Ted.TodoList.Views.js"></script>-->
+		<!--<script src="js/Ted.TodoList.js"></script>-->
+		<script>
+			$(function () {
+				Ted.on('start', function () {
+					Backbone.history.start();
+					console.log('2')
+				});
+				// start the Ted app (defined in js/Ted.js)
+				Ted.start();
+			});
+		</script>
 	</body>
 </html>
